@@ -17,6 +17,9 @@ jobs:
       - run:
           command: python -m unittest discover
           name: Test
+      - run:
+          command: python -m unittest discover -p integration*.py
+          name: Integration Test
 
 workflows:
   main:

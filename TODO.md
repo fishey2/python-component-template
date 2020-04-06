@@ -1,0 +1,1 @@
+1. Find a better way to access source package dependencies from tests, currently uses pip inbstall .
