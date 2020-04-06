@@ -18,7 +18,7 @@ jobs:
           command: python -m xmlrunner discover -o ./test-results/unit
           name: Test
       - run:
-          command: python -m unittest discover -p integration*.py -o ./test-results/integration
+          command: python -m xmlrunner discover -p integration*.py -o ./test-results/integration
           name: Integration Test
       - store_test_results:
           path: ./test-results
