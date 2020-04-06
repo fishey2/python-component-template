@@ -15,9 +15,6 @@ $ pip freeze > requirements.txt
 1. Flask
 
 
-## CircleCI
-
-
 ## Process
 
 ### Create Virtual Environment
@@ -106,3 +103,10 @@ if __name__ == '__main__':
 
 ```
 
+Adding `xmlrunner` required no changes to the tests themselves, and
+can instead be achieved from the command line. `xmlrunner` outputs an JUnit type `xml` output from the tests.
+
+# Circle CI
+
+1. Has built-in functions for things such as `store_test_results`, which only requires the `path` parameter.
+2. Similar to most other pipeline languages, written in yaml (GitHub Actions)
