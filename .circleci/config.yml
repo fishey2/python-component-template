@@ -12,6 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          command: pip install .
+          name: Install Package
+      - run:
           command: python -m unittest discover
           name: Test
 
