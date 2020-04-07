@@ -28,6 +28,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          name: Install Coverage
+          command: pip install coverage
+      - run:
           name: Test Coverage
           command: make test-coverage
       - sonarcloud/scan
