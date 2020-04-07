@@ -8,5 +8,5 @@ setup(name='component_template',
       author='Brett Fisher',
       author_email='brett.fisher@thoughtworks.com',
       packages=['component_template'],
-      package_dir={'component_template': 'src/component_template'}
+      package_dir={'component_template': 'component_template/component_template'}
       )

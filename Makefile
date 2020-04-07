@@ -26,15 +26,24 @@ test: clean build _test_unit _test_integration
 
 _test_unit:
 	echo 'Running unit tests for commit ${COMMIT_HASH}...'
-	python -m xmlrunner -o ./test-results/unit
+	python -m xmlrunner discover -s component_template -o ./test-results/unit
 
 test-unit: build get-latest-commit-hash _test_unit
 
 _test_integration:
 	echo 'Running integration tests for commit ${COMMIT_HASH}...'
-	python -m xmlrunner discover -p integration*.py -o ./test-results/integration
+	python -m xmlrunner discover -s component_template -p itest*.py -o ./test-results/integration
 
 test-integration: build get-latest-commit-hash _test_integration
+
+_test_coverage:
+	echo 'Running integration tests for commit ${COMMIT_HASH}...'
+	coverage run -m unittest discover -s component_template -p *test*.py
+	coverage xml -o ./test-results/coverage/coverage-all.xml --omit="**/test/*.py,venv/*"
+
+
+test-coverage: build get-latest-commit-hash _test_coverage
+
 
 lint: clean
 	flake8

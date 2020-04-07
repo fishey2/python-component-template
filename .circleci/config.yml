@@ -13,11 +13,11 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: make test-unit
           name: Unit Tests
+          command: make test-unit
       - run:
-          command: make test-integration
           name: Integration Tests
+          command: make test-integration
       - store_test_results:
           path: ./test-results
   quality-gate-sonar:
@@ -28,8 +28,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          name: Install dependencies and build project
-          command: make test
+          name: Test Coverage
+          command: make test-coverage
       - sonarcloud/scan
 
 workflows:
