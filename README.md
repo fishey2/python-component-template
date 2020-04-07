@@ -1,6 +1,7 @@
 # Python Component Template
 
 [![Fishey2](https://circleci.com/gh/fishey2/python-component-template/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/fishey2/python-component-template)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fishey2_python-component-template&metric=alert_status)](https://sonarcloud.io/dashboard?id=fishey2_python-component-template)
 
 ### Install
 
