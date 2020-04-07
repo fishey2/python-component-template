@@ -36,7 +36,7 @@ test-integration: install get-latest-commit-hash _test_integration
 _test_coverage:
 	echo 'Running integration tests for commit ${COMMIT_HASH}...'
 	python -m coverage run -m unittest discover -s component_template -p *test*.py
-	python -m coverage xml -o ./test-results/coverage/coverage-all.xml --omit="**/test/*.py,venv/*"
+	python -m coverage xml -o ./test-results/coverage/coverage-all.xml --omit="component_template/test/*.py,venv/*"
 
 test-coverage: install get-latest-commit-hash _test_coverage
 
