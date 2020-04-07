@@ -33,5 +33,5 @@ workflows:
   main:
     jobs:
       - build-and-test
-      - quality-gate-sonar
-          context: SonarCloud
+      - quality-gate-sonar:
+        context: SonarCloud
