@@ -3,6 +3,10 @@
 [![Fishey2](https://circleci.com/gh/fishey2/python-component-template/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/fishey2/python-component-template)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fishey2_python-component-template&metric=alert_status)](https://sonarcloud.io/dashboard?id=fishey2_python-component-template)
 
+ [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=fishey2_python-component-template&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=fishey2_python-component-template)
+ [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=fishey2_python-component-template&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=fishey2_python-component-template)
+ [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fishey2_python-component-template&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=fishey2_python-component-template)
+
 ### Install
 
 
