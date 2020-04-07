@@ -12,20 +12,14 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pip install .
-          name: Install Package
-      - run:
           command: make lint
           name: Check Linting
       - run:
           command: make test-unit
           name: Unit Tests
       - run:
-          command: python -m xmlrunner discover -o ./test-results/unit
-          name: Test
-      - run:
-          command: python -m xmlrunner discover -p integration*.py -o ./test-results/integration
-          name: Integration Test
+          command: make test-integration
+          name: Integration Tests
       - store_test_results:
           path: ./test-results
 
