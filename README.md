@@ -18,6 +18,7 @@ $ pip freeze > requirements.txt
 1. CirlceCI
 1. flake8 for linting
 1. Flask
+1. SonarCloud - for static analysis
 1. make - used in place of dojo
 
 ## Process
