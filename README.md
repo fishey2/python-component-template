@@ -11,9 +11,9 @@ $ pip freeze > requirements.txt
 ## Technology
 
 1. CirlceCI
-
+1. flake8 for linting
 1. Flask
-
+1. make - used in place of dojo
 
 ## Process
 
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-To run this you can use ` python -m unittest discover tests/`, the default.
+To run this you can use ` python -m unittest discover test/`, the default.
 
 ## Packages
 
