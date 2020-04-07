@@ -36,7 +36,7 @@ _test_integration:
 
 test-integration: build get-latest-commit-hash _test_integration
 
-lint: clean-env
+lint: clean
 	flake8
 
 test:

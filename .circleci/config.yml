@@ -13,9 +13,6 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: make lint
-          name: Check Linting
-      - run:
           command: make test-unit
           name: Unit Tests
       - run:
@@ -32,10 +29,8 @@ jobs:
       - python/save-cache
       - sonarcloud/scan
 
-
-
-
 workflows:
   main:
     jobs:
       - build-and-test
+      - quality-gate-sonar
