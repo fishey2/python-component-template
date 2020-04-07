@@ -27,6 +27,9 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
+      - run:
+          name: Install dependencies and build project
+          command: make test
       - sonarcloud/scan
 
 workflows:
