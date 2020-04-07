@@ -1,4 +1,9 @@
+# Python Component Template
+
+[![Fishey2](https://circleci.com/gh/fishey2/python-component-template/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/fishey2/python-component-template)
+
 ### Install
+
 
 ```bash
 // Installs packages from requirements.txt
