@@ -39,8 +39,5 @@ test-integration: build get-latest-commit-hash _test_integration
 lint: clean
 	flake8
 
-test:
-	py.test --verbose --color=yes $(TEST_PATH)
-
 run:
 	python manage.py runserver
