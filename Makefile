@@ -18,23 +18,20 @@ clean: clean-env clean-pyc
 install:
 	pip install -r requirements.txt
 
-build: install
-	pip install .
-
-test: clean build _test_unit _test_integration
+test: clean install _test_unit _test_integration
 	echo 'Running all tests fror commit ${COMMIT_HASH}'
 
 _test_unit:
 	echo 'Running unit tests for commit ${COMMIT_HASH}...'
 	python -m xmlrunner discover -s component_template -o ./test-results/unit
 
-test-unit: build get-latest-commit-hash _test_unit
+test-unit: install get-latest-commit-hash _test_unit
 
 _test_integration:
 	echo 'Running integration tests for commit ${COMMIT_HASH}...'
 	python -m xmlrunner discover -s component_template -p itest*.py -o ./test-results/integration
 
-test-integration: build get-latest-commit-hash _test_integration
+test-integration: install get-latest-commit-hash _test_integration
 
 _test_coverage:
 	echo 'Running integration tests for commit ${COMMIT_HASH}...'
@@ -42,7 +39,7 @@ _test_coverage:
 	coverage xml -o ./test-results/coverage/coverage-all.xml --omit="**/test/*.py,venv/*"
 
 
-test-coverage: build get-latest-commit-hash _test_coverage
+test-coverage: install get-latest-commit-hash _test_coverage
 
 
 lint: clean
